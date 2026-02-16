@@ -37,8 +37,16 @@ body {
   font-weight: 700;
 }
 
+.hero-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 18px;
+}
+
 .cover {
-  margin: 0 0 26px;
+  margin: 0;
   max-width: 300px;
 }
 
@@ -47,6 +55,41 @@ body {
   display: block;
   border-radius: 10px;
   border: 1px solid var(--line);
+}
+
+.hero-side {
+  min-height: 1px;
+}
+
+.link-card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  padding: 12px 14px;
+}
+
+.link-title {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: "Literata", Georgia, serif;
+}
+
+.link-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  background: var(--chip);
+  border: 1px solid var(--line);
+  margin: 0 10px 10px 0;
+}
+
+.link-item:hover {
+  border-color: #d6d6d1;
 }
 
 p {
@@ -205,6 +248,10 @@ body.loaded .reveal {
 
   .cover {
     max-width: 240px;
+  }
+
+  .hero-row {
+    grid-template-columns: 1fr;
   }
 
   .plain-list li,
