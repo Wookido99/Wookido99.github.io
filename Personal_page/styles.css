@@ -39,7 +39,7 @@ body {
 
 .cover {
   margin: 0 0 26px;
-  max-width: 340px;
+  max-width: 300px;
 }
 
 .cover img {
@@ -96,6 +96,11 @@ p {
 .me {
   color: var(--mark);
   font-weight: 700;
+}
+
+.co sup {
+  font-size: 0.72em;
+  vertical-align: super;
 }
 
 .skills {
@@ -199,7 +204,7 @@ body.loaded .reveal {
   }
 
   .cover {
-    max-width: 280px;
+    max-width: 240px;
   }
 
   .plain-list li,
