@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Taewook Ham | Personal Page</title>
+    <meta name="description" content="Taewook Ham's personal GitHub Pages site">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="bg-art" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home">Taewook Ham</a>
+      <button class="menu-btn" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#goals">Goals</a>
+      </nav>
+    </header>
+
+    <main id="home" class="layout">
+      <section class="hero reveal" id="about">
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="photo_blue.jpeg" alt="Portrait of Taewook Ham">
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">KAIST Data AI Lab</p>
+          <h1>Hello, I'm Taewook Ham.</h1>
+          <p>
+            I am a first-year Master's student at KAIST Data AI Lab under the supervision of
+            Prof. Jaemin Yoo at Korea Advanced Institute of Science and Technology (KAIST).
+          </p>
+          <p>
+            My research focus is explainable and interpretable graph neural networks, with a goal
+            of producing practical and trustworthy AI for data mining.
+          </p>
+          <div class="hero-links">
+            <a class="btn primary" href="https://github.com/wookido" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn" href="https://wookido.notion.site/Hello-I-m-Taewook-Ham-1564c653e17a80869911fbc5f77fc31b" target="_blank" rel="noreferrer">Notion</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reveal" id="education">
+        <div class="section-head">
+          <h2>Education</h2>
+        </div>
+        <div class="timeline">
+          <article class="item">
+            <p class="item-time">2018.02 - 2024.08</p>
+            <h3>B.S. in Electrical Engineering</h3>
+            <p>Korea Advanced Institute of Science and Technology (KAIST)</p>
+            <p>Minor in Mechanical Engineering</p>
+          </article>
+          <article class="item">
+            <p class="item-time">2024.09 - Present</p>
+            <h3>Master's Course in Electrical Engineering</h3>
+            <p>Korea Advanced Institute of Science and Technology (KAIST)</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="publications">
+        <div class="section-head">
+          <h2>Publications</h2>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <p class="badge">C1</p>
+            <h3>Self-Guided Explainer with Multi-Stage Training</h3>
+            <p class="meta">ICLR 2026</p>
+            <p class="authors"><strong>Taewook Ham</strong>, Cheonwoo Lee, Jaemin Yoo</p>
+          </article>
+          <article class="card">
+            <p class="badge">C2</p>
+            <h3>CadSR: Dual-View Social Recommendation Based on User Communities and Socially-Connected Items</h3>
+            <p class="meta">ICDM 2025</p>
+            <p class="authors">Doyun Choi, Cheonwoo Lee, Biniyam, <strong>Taewook Ham</strong>, Chanyoung Park, Jaemin Yoo</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="experience">
+        <div class="section-head">
+          <h2>Experience</h2>
+        </div>
+        <div class="grid compact">
+          <article class="card">
+            <h3>Internship at Lucentblock</h3>
+            <p class="meta">2023.06 - 2023.08</p>
+          </article>
+          <article class="card">
+            <h3>Undergraduate Research Intern at Data AI Lab</h3>
+            <p class="meta">2024.01 - 2024.08</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" id="skills">
+        <div class="section-head">
+          <h2>Technical Skills</h2>
+        </div>
+        <ul class="chips" aria-label="Technical skills">
+          <li>Python</li>
+          <li>Managing GPU Server</li>
+        </ul>
+      </section>
+
+      <section class="section reveal" id="goals">
+        <div class="section-head">
+          <h2>Goals</h2>
+          <p class="progress">Progress: 2/4 completed</p>
+        </div>
+        <ul class="goal-list">
+          <li class="done">First paper to conference as first author</li>
+          <li>Paper acceptance</li>
+          <li class="done">Expand research area</li>
+          <li>Second paper submission to next conference</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Last updated 2026.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
