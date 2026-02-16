@@ -39,7 +39,7 @@ body {
 
 .hero-row {
   display: grid;
-  grid-template-columns: minmax(160px, 150px) minmax(0, 1fr);
+  grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
   gap: 18px;
   align-items: start;
   margin-bottom: 18px;
@@ -47,7 +47,7 @@ body {
 
 .cover {
   margin: 0;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .cover img {
@@ -59,6 +59,7 @@ body {
 
 .hero-side {
   min-height: 1px;
+  max-width: 440px;
 }
 
 .link-card {
@@ -66,6 +67,7 @@ body {
   border-radius: 10px;
   background: #fff;
   padding: 12px 14px;
+  width: 100%;
 }
 
 .link-title {
@@ -252,7 +254,7 @@ body.loaded .reveal {
   }
 
   .cover {
-    max-width: 120px;
+    max-width: 160px;
   }
 
   .hero-row {
