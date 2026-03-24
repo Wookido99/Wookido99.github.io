@@ -139,15 +139,27 @@ p {
 }
 
 .project-link {
-  color: var(--mark);
+  color: #fff;
+  background: var(--mark);
+  padding: 2px 10px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
-  width: fit-content;
+  font-size: 0.75rem;
+  margin-left: 6px;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(15, 118, 110, 0.15);
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.25);
+  background: #115e59;
+  /* Slightly darker teal */
+  text-decoration: none;
 }
 
 .plain-list strong {
