@@ -136,6 +136,26 @@ p {
   background: #fff;
   display: grid;
   gap: 6px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.clickable-block {
+  padding: 0 !important;
+  cursor: pointer;
+}
+
+.clickable-block:hover {
+  background: var(--chip);
+  border-color: #d6d6d1;
+}
+
+.clickable-block a {
+  display: grid;
+  gap: 6px;
+  padding: 12px 14px;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
 }
 
 .plain-list strong {
@@ -242,6 +262,7 @@ body.loaded .reveal {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
