@@ -158,6 +158,21 @@ body {
   user-select: none;
 }
 
+.skill-label {
+  display: flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.skill-sep {
+  color: #cdd0ce;
+  margin: 0 6px;
+  font-weight: 400;
+}
+
 p {
   margin: 0 0 14px;
   font-size: 1rem;
