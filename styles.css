@@ -115,29 +115,6 @@ body {
   background: #fafcfc;
 }
 
-.skills-split {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  height: 100%;
-  margin-top: 4px;
-}
-
-.skills-half {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.skills-subtitle {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0 0 2px 0;
-}
-
 .skill-row {
   display: flex;
   gap: 6px;
