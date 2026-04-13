@@ -181,6 +181,47 @@ p {
   vertical-align: super;
 }
 
+.pub-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--line);
+}
+
+.pub-link.paper {
+  background: var(--mark);
+  color: #fff;
+  border-color: var(--mark);
+}
+
+.pub-link.paper:hover {
+  background: #115e59;
+  border-color: #115e59;
+  transform: translateY(-1px);
+}
+
+.pub-link.code {
+  background: #fff;
+  color: var(--text);
+}
+
+.pub-link.code:hover {
+  background: var(--chip);
+  border-color: #d6d6d1;
+  transform: translateY(-1px);
+}
+
 .skills {
   display: flex;
   flex-wrap: wrap;
