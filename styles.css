@@ -65,7 +65,7 @@ body {
   min-height: 1px;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 240px) 1fr;
+  grid-template-columns: minmax(0, 200px) 1fr;
   gap: 18px;
 }
 
