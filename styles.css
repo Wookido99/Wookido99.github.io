@@ -5,6 +5,8 @@
   --line: #ebebe8;
   --chip: #f5f5f3;
   --mark: #0f766e;
+  /* A4 proportions: 210mm x 297mm ≈ 1 : 1.414 */
+  --page-width: 820px;
 }
 
 * {
@@ -15,23 +17,49 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #f3f3f2;
-  /* PDF viewer-like background */
+  background-color: #e8e8e6;
   color: var(--text);
   font-family: "IBM Plex Sans", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
   min-height: 100vh;
 }
 
-.page {
-  max-width: 840px;
-  margin: 40px auto;
-  padding: 80px 60px;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05), 0 1px 8px rgba(0, 0, 0, 0.02);
-  border-radius: 2px;
-  min-height: calc(100vh - 80px);
+/* ── PDF Viewer wrapper ── */
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 36px 16px 60px;
+  gap: 24px;
+  /* gap between pages = gray strip */
 }
 
+/* ── Each A4 page ── */
+.pdf-page {
+  width: 100%;
+  max-width: var(--page-width);
+  /* A4 height at this width */
+  min-height: calc(var(--page-width) * 1.414);
+  background: #ffffff;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.12),
+    0 12px 32px rgba(0, 0, 0, 0.06);
+  border-radius: 1px;
+  padding: 72px 72px 80px;
+  position: relative;
+}
+
+/* ── Page number watermark (bottom right) ── */
+.pdf-page::after {
+  content: attr(data-page);
+  position: absolute;
+  bottom: 28px;
+  right: 40px;
+  font-size: 0.78rem;
+  color: #c0c0bc;
+  letter-spacing: 0.03em;
+}
+
+/* ── Typography ── */
 .hero h1,
 .block h2 {
   font-family: "Literata", Georgia, serif;
@@ -40,13 +68,13 @@ body {
 
 .hero h1 {
   margin: 0 0 22px;
-  font-size: clamp(2rem, 4vw, 2.9rem);
+  font-size: clamp(1.9rem, 3.5vw, 2.7rem);
   font-weight: 700;
 }
 
 .hero-row {
   display: grid;
-  grid-template-columns: minmax(160px, 200px) minmax(0, 1fr);
+  grid-template-columns: minmax(150px, 190px) minmax(0, 1fr);
   gap: 18px;
   align-items: end;
   margin-bottom: 18px;
@@ -54,7 +82,7 @@ body {
 
 .cover {
   margin: 0;
-  max-width: 200px;
+  max-width: 190px;
 }
 
 .cover img {
@@ -72,7 +100,7 @@ body {
 .link-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: #fff;
@@ -82,7 +110,7 @@ body {
 
 .link-title {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   font-family: "Literata", Georgia, serif;
 }
@@ -91,60 +119,77 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 12px;
+  padding: 9px 12px;
   border-radius: 8px;
   text-decoration: none;
   color: var(--text);
   background: var(--chip);
   border: 1px solid var(--line);
   width: 100%;
-  min-height: 44px;
+  min-height: 40px;
   margin: 0;
+  font-size: 0.95rem;
 }
 
 .link-item:hover {
   border-color: #d6d6d1;
 }
 
-.link-card .link-item:last-child {
-  margin-bottom: 0;
-}
-
 p {
-  margin: 0 0 14px;
-  font-size: 1rem;
+  margin: 0 0 12px;
+  font-size: 0.95rem;
   line-height: 1.75;
 }
 
+/* ── Section blocks ── */
 .block {
-  margin-top: 34px;
+  margin-top: 28px;
   padding-top: 10px;
   border-top: 1px solid var(--line);
 }
 
+.first-block {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
 .block h2 {
-  margin: 0 0 16px;
-  font-size: 1.45rem;
+  margin: 0 0 14px;
+  font-size: 1.35rem;
   font-weight: 600;
 }
 
+/* ── Lists ── */
 .plain-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .plain-list li {
-  padding: 12px 14px;
+  padding: 11px 14px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 8px;
   background: #fff;
   display: grid;
-  gap: 6px;
+  gap: 5px;
 }
 
+.plain-list strong {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.plain-list span {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* ── Project / paper links ── */
 .project-link {
   color: #fff;
   background: var(--mark);
@@ -165,27 +210,7 @@ p {
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(15, 118, 110, 0.25);
   background: #115e59;
-  /* Slightly darker teal */
   text-decoration: none;
-}
-
-.plain-list strong {
-  font-weight: 600;
-}
-
-.plain-list span {
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.me {
-  color: var(--mark);
-  font-weight: 700;
-}
-
-.co sup {
-  font-size: 0.72em;
-  vertical-align: super;
 }
 
 .pub-links {
@@ -199,7 +224,7 @@ p {
   align-items: center;
   padding: 4px 10px;
   border-radius: 6px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -229,90 +254,48 @@ p {
   transform: translateY(-1px);
 }
 
+/* ── Name & author highlights ── */
+.me {
+  color: var(--mark);
+  font-weight: 700;
+}
+
+.co sup {
+  font-size: 0.72em;
+  vertical-align: super;
+}
+
+/* ── Skills chips ── */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skills span {
   background: var(--chip);
   border: 1px solid var(--line);
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 7px 14px;
   font-weight: 500;
+  font-size: 0.9rem;
 }
 
-.check-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.check-list li {
-  position: relative;
-  padding: 10px 12px 10px 36px;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  background: #fff;
-}
-
-.check-list li::before {
-  content: "";
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  width: 14px;
-  height: 14px;
-  border: 1.5px solid #989892;
-  border-radius: 3px;
-  transform: translateY(-50%);
-}
-
-.check-list li.done::before {
-  border-color: var(--mark);
-  background: var(--mark);
-}
-
-.check-list li.done::after {
-  content: "";
-  position: absolute;
-  left: 17px;
-  top: 50%;
-  width: 4px;
-  height: 8px;
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  transform: translateY(-65%) rotate(45deg);
-}
-
-.foot {
-  margin-top: 36px;
-  padding-top: 10px;
-  border-top: 1px solid var(--line);
-}
-
-.foot a {
-  color: var(--muted);
-  text-underline-offset: 3px;
-}
-
+/* ── Reveal animation ── */
 .reveal {
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(12px);
 }
 
 body.loaded .reveal {
-  animation: fadeup 0.45s ease forwards;
+  animation: fadeup 0.5s ease forwards;
   animation-delay: var(--delay, 0s);
 }
 
 @keyframes fadeup {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
 
   to {
@@ -321,13 +304,54 @@ body.loaded .reveal {
   }
 }
 
-@media (max-width: 700px) {
-  .page {
-    padding: 40px 20px 60px;
-    margin: 0;
+/* ── Print: real page breaks ── */
+@media print {
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  .pdf-viewer {
+    padding: 0;
+    gap: 0;
+  }
+
+  .pdf-page {
     box-shadow: none;
     border-radius: 0;
+    page-break-after: always;
+    max-width: 100%;
     min-height: 100vh;
+    padding: 60px 72px;
+  }
+
+  .pdf-page::after {
+    display: none;
+    /* hide watermark on print */
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  body.loaded .reveal {
+    animation: none;
+  }
+}
+
+/* ── Mobile ── */
+@media (max-width: 700px) {
+  .pdf-viewer {
+    padding: 16px 0 40px;
+    gap: 16px;
+  }
+
+  .pdf-page {
+    padding: 40px 22px 56px;
+    min-height: unset;
+    border-radius: 0;
   }
 
   .hero h1 {
@@ -335,17 +359,11 @@ body.loaded .reveal {
   }
 
   .cover {
-    max-width: 160px;
+    max-width: 150px;
   }
 
   .hero-row {
     grid-template-columns: 1fr;
-  }
-
-  .plain-list li,
-  .check-list li {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 }
 
