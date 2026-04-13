@@ -412,12 +412,17 @@ body.loaded .reveal {
     padding: 0;
   }
 
-  .block,
   .hero-row,
   .plain-list li,
   .link-card {
     page-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  h2 {
+    page-break-after: avoid;
+    break-after: avoid;
+    page-break-inside: avoid;
   }
 
   .reveal {
