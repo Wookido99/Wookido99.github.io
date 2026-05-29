@@ -218,6 +218,24 @@ p {
   line-height: 1.6;
 }
 
+.plain-list .meta-links {
+  color: var(--text);
+  font-size: 0.9em;
+  font-weight: 500;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.meta-link {
+  color: var(--mark);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.meta-link:hover {
+  text-decoration: none;
+}
+
 .me {
   color: var(--mark);
   font-weight: 700;
