@@ -61,16 +61,30 @@ body {
   border: 1px solid var(--line);
 }
 
+.toss-page .hero-row {
+  align-items: start;
+}
+
 .toss-page .cover {
+  width: 200px;
   height: 210px;
+  overflow: hidden;
 }
 
 .toss-page .cover img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
+.toss-page .hero-side {
+  height: fit-content;
+}
+
+.toss-page .link-card {
+  height: auto;
+}
 .hero-side {
   min-height: 1px;
   width: 100%;

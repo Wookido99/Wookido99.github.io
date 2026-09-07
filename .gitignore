@@ -9,3 +9,8 @@ __pycache__/
 *.zip
 *.tar
 *.gz
+
+# Local paper reference files
+BEEP.pdf
+PNE_GAD.pdf
+PULSE.pdf
