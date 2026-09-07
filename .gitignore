@@ -1,2 +1,11 @@
 .DS_Store
 __pycache__/
+
+# Large media and archive files
+*.mov
+*.mp4
+*.avi
+*.mkv
+*.zip
+*.tar
+*.gz
