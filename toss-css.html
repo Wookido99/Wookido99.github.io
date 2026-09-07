@@ -23,12 +23,11 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<!-- <body> -->
 <body class="toss-page">
   <main class="page">
-    <!-- <p style="margin: 0 0 20px; color: var(--muted); font-size: 0.88rem;">Targeted CV for Toss ML Engineer (CSS) · <a href="index.html" style="color: var(--mark); text-decoration: none; font-weight: 500;">View general CV</a></p> -->
+    <p style="margin: 0 0 20px; color: var(--muted); font-size: 0.88rem;">Targeted CV for Toss ML Engineer (CSS) · <a href="index.html" style="color: var(--mark); text-decoration: none; font-weight: 500;">View general CV</a></p>
     <header class="hero reveal">
-      <h1>Resume</h1>
+      <h1>Hello, I'm Taewook Ham</h1>
       <div class="hero-row">
         <figure class="cover">
           <img src="photo_suit.png" alt="Taewook Ham">
@@ -122,9 +121,12 @@
           <span><span class="co">Doyun Choi<sup>*</sup></span>, <span class="co">Cheonwoo Lee<sup>*</sup></span>,
             Biniyam, <span class="me">Taewook Ham</span>, Chanyoung Park, Jaemin Yoo</span>
           <ul style="padding-left: 20px; margin: 4px 0 0 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Problem: parameter-efficient graph collaborative filtering for socially-aware user representation learning.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Model: PULSE, a socially-aware user representation modeling approach for graph-based recommendation.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Result: accepted as an Oral paper at WWW 2026; implementation and paper links are provided above.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> conventional graph collaborative filtering assigns explicit embeddings to every user and item, causing parameter growth and scalability issues under sparse or noisy social interactions.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem:</strong> incorporate socially meaningful signals into user representations while reducing the parameter and computational burden of graph recommendation.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Model:</strong> PULSE (Parameter-efficient User representation Learning with Social Knowledge), combining community-aware embedding generation (CEG), socially-connected item-aware embedding generation (SIEG), adaptive gated fusion, and a LightGCN backbone trained with BPR and self-supervised objectives.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> compared against 13 graph collaborative filtering and social-recommendation baselines on Douban-Book, Yelp, and Epinions, including sparse-interaction, cold-start, and noisy-social-network settings; evaluated recommendation quality, parameter size, and computational efficiency.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Improvement and impact:</strong> reduced parameters by up to 50% compared with LightGCN and improved NDCG@20 by 9.0%, 8.1%, and 8.5% over the best competitors across the three datasets.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> contributed as a co-author in a six-member research collaboration spanning model development, experiments, and paper preparation; accepted as an Oral paper at WWW 2026.</li>
           </ul>
         </li>
         <li>
@@ -136,9 +138,12 @@
           </strong>
           <span><span class="me">Taewook Ham</span>, Cheonwoo Lee, Myeong Kong, Jaemin Yoo</span>
           <ul style="padding-left: 20px; margin: 4px 0 0 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Problem: improve the faithfulness and interpretability of explanations produced by graph neural networks.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Method: investigate bimodal edge-score distributions beyond the Graph Information Bottleneck formulation.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Result: research manuscript currently under review.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> graph explainers lack edge-level ground-truth labels and often produce continuous, ambiguous edge-importance scores even when their ranking metric is high.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem:</strong> improve explanation accuracy while making important and unimportant edges more clearly separable.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Model/method:</strong> BEEP (Bimodal Edge Explanation via Polarization), a self-guided framework that creates confidence-zone pseudo-labels and trains a guided explainer beyond the Graph Information Bottleneck formulation.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> applied the method to existing post-hoc explainers and compared against PGExplainer, GSAT, MixupExplainer, ProxyExplainer, and ConfExplainer on four synthetic and real-world benchmarks using AUC, F1, binarization, and bimodality metrics, with ablation and robustness studies.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Improvement and impact:</strong> improved explanation metrics across baselines; on MNIST-75sp, the binarization score increased from 0.162 to 0.714, while the method retained linear time complexity and low inference overhead.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> led the master's thesis research, including problem definition, method design, theoretical analysis, implementation, experiments, and manuscript preparation; manuscript currently under review.</li>
           </ul>
         </li>
         <li>
@@ -146,9 +151,11 @@
             Representations</strong>
           <span>Doyun Choi, Myeong Kong, <span class="me">Taewook Ham</span>, Jaemin Yoo</span>
           <ul style="padding-left: 20px; margin: 4px 0 0 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Problem: detect anomalies at the graph level while exposing evidence that supports each prediction.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Model: PNE-GAD, based on normality-evident graph representations for self-explainable graph anomaly detection.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Result: research manuscript currently under review.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> graph-level anomaly detection must identify abnormal structures while making the evidence behind each prediction inspectable.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem:</strong> develop a graph-level anomaly detector whose representations expose normality-related evidence rather than producing an opaque anomaly score only.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Model:</strong> PNE-GAD, a self-explainable graph-level anomaly-detection approach based on normality-evident graph representations.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> investigated graph representation learning, anomaly-detection behavior, and explanation quality through model experiments in a multi-author research project.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Impact and collaboration:</strong> connected anomaly scores with inspectable graph evidence through a research collaboration; manuscript currently under review.</li>
           </ul>
         </li>
       </ul>
@@ -175,8 +182,6 @@
             <li style="padding: 0; border: none; background: transparent; display: list-item;">Conducted research on
               advanced graph neural networks
               for representation learning, with a focus on recent advances in graph machine learning.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Modeling: developed and evaluated graph representation-learning ideas with GNNs using PyTorch and PyTorch Geometric.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Application connection: worked on relational representations that support recommendation, anomaly detection, and explainability tasks.</li>
           </ul>
         </li>
       </ul>
@@ -200,9 +205,13 @@
             <li style="padding: 0; border: none; background: transparent; display: list-item;">Designed a predictive
               model to estimate property prices and
               impute missing values for properties with no transaction history over the past two years.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Problem formulation: addressed prediction for properties with sparse transaction history by separating price estimation from missing-value imputation.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Modeling: designed a property-price prediction and data-completion pipeline; exact algorithm and evaluation metrics should be added from the project record before submission.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Output: generated estimates for properties lacking recent transaction observations.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> nationwide analysis was narrowed to Seoul's 25 districts because of public-API traffic limits and model-training resource constraints; the project used 2021.05–2023.04 for training and 2023.05–2023.06 for testing.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem definition:</strong> given the address of a commercial or office property, estimate its market price when no transaction had occurred within the previous two years; recent transactions were time-corrected and used directly as references.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Data and preprocessing:</strong> combined Ministry of Land public transaction data with 13 additional sources; handled missing values, created area and time features, applied Box–Cox transformation, encoded categorical variables, and incorporated location/accessibility and market features.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Models and experiment:</strong> compared SVR, Ridge, ElasticNet, SGDRegressor, BayesianRidge, LinearRegression, RandomForestRegressor, and XGBRegressor; selected Random Forest as the baseline, tuned with Optuna, and developed an XGBoost final model. Iteratively tested Tukey outlier filtering, FastABOD with spatial clustering, and purpose-specific time correction.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Evaluation and improvement:</strong> the initial XGBoost model achieved an RMSE of approximately KRW 1.34B; FastABOD-based outlier filtering reduced it to KRW 1.14B, while a refined sub-analysis for properties below KRW 10B achieved KRW 457M RMSE before the final time-correction comparison of KRW 610M RMSE and 36.8% mean error.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Application and impact:</strong> used the final pipeline to generate estimated market references for properties with no recent transaction history; this was a research/internship project and no production deployment is claimed.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> as an ML intern, designed the modeling approach and iterated through domain research, data cleaning, feature engineering, model comparison, error analysis, and improvement with the project team.</li>
           </ul>
         </li>
         <li>
@@ -218,8 +227,9 @@
             <li style="padding: 0; border: none; background: transparent; display: list-item;">Delivered lectures and
               conducted training sessions on time series forecasting and GNN-based recommender systems for
               Samsung Electronics employees.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Covered modeling workflows for time-series forecasting and graph neural network-based recommendation, including how to frame a real-world problem and interpret model outputs.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Result: translated technical ML concepts into practical training materials and sessions for working professionals.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem and constraint:</strong> translate advanced ML methods into understandable, practical workflows for working professionals with different technical backgrounds.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Models and experiment:</strong> prepared and delivered sessions on time-series forecasting and GNN-based recommender systems, covering problem framing, model behavior, and interpretation of outputs.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Impact and collaboration:</strong> adapted technical explanations and examples to learner questions and business contexts, contributing to training materials and live sessions as a Teaching Assistant and AI Application Specialist.</li>
           </ul>
         </li>
       </ul>
@@ -253,8 +263,12 @@
             </span>
           </strong>
           <ul style="padding-left: 20px; margin: 4px 0 0 0; color: #555; font-size: 0.95rem; line-height: 1.6;">
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Problem: classify sleep stages from non-contact sensor data in collaboration with Ceragem.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;">Modeling and result details: update with the verified model name, signal-processing steps, evaluation metrics, and project outcome from the linked material.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> classify sleep stages from noisy non-contact bio-signal data while preserving temporal context across consecutive 30-second epochs.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem definition:</strong> predict the five AASM stages—Wake, N1, N2, N3, and REM—from sensor sequences in collaboration with Ceragem.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Preprocessing and models:</strong> implemented channel-wise outlier clipping, Z-score normalization, signal pooling, caching, and sequence generation; compared an MLP baseline with DeepSleepNet, SeqSleepNet, and SleepTransformer.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> used train/validation/test splits, validation-based early stopping, and test-set class-wise Precision, Recall, and F1 reporting to compare model behavior.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Improvement and impact:</strong> built a reproducible training/evaluation pipeline with preprocessing cache and best-checkpoint selection; the available project material does not include a final numeric score or production-service deployment.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> developed the modeling pipeline for the Ceragem project and organized the implementation so that alternative architectures and preprocessing settings could be compared consistently.</li>
           </ul>
           <!-- <span>2025.09 ~ 2025.12</span> -->
         </li>
