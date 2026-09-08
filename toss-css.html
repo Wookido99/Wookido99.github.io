@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello, I'm Taewook Ham | Toss ML Engineer (CSS)</title>
-  <meta name="description" content="Taewook Ham targeted CV for Toss ML Engineer (CSS)">
+  <title>Hello, I'm Taewook Ham</title>
+  <meta name="description" content="Taewook Ham CV">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL662K8VPS"></script>
   <script>
@@ -25,7 +25,6 @@
 
 <body class="toss-page">
   <main class="page">
-    <p style="margin: 0 0 20px; color: var(--muted); font-size: 0.88rem;">Targeted CV for Toss ML Engineer (CSS) · <a href="index.html" style="color: var(--mark); text-decoration: none; font-weight: 500;">View general CV</a></p>
     <header class="hero reveal">
       <h1>Hello, I'm Taewook Ham</h1>
       <div class="hero-row">
@@ -74,19 +73,11 @@
         </aside>
       </div>
       <p>
-        I'm a Master's student at Data AI Lab under the supervision of
-        <a href="https://jaeminyoo.github.io/" target="_blank" rel="noreferrer"
-          style="color: var(--mark); text-decoration: none; font-weight: 500;">Prof. Jaemin Yoo</a> at Korea Advanced
-        Institute of Science & Technology (KAIST).
-        I am interested in Graph Machine Learning and its applications.
-        My research focuses on explainable graph neural networks, social recommendation systems, and anomaly detection.
-        I am also interested in applying machine learning to real-world problems and exploring emerging areas such as GraphLLMs and graph and tabular foundation models.
-        <!-- I am passionate about advancing research in Large Language Models with Graph (GraphLLMs) and Graph Foundation
-        Models (GFMs).
-        My work focuses on bridging relational structures with large language models to build structure-aware AI
-        systems.
-        I strive to deepen my expertise and make meaningful contributions to the fields of data mining and artificial
-        intelligence. -->
+        I received my M.S. degree in Electrical Engineering from the Korea Advanced Institute of Science and Technology (KAIST).
+        I conducted research at the Data AI Lab under the supervision of <a href="https://jaeminyoo.github.io/" target="_blank" rel="noreferrer"
+          style="color: var(--mark); text-decoration: none; font-weight: 500;">Prof. Jaemin Yoo</a>.
+        My work focuses on scalable user representation learning from interaction and social graphs, explainable GNNs, and graph-level anomaly detection using PyTorch and PyTorch Geometric.
+        I am also interested in applying machine learning to real-world problems and exploring emerging areas such as GraphLLMs and tabular foundation models.
       </p>
     </header>
 
@@ -124,9 +115,10 @@
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Constraint:</strong> conventional graph collaborative filtering assigns explicit embeddings to every user and item, causing parameter growth and scalability issues under sparse or noisy social interactions.</li>
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Problem definition:</strong> incorporate socially meaningful signals into user representations while reducing the parameter and computational burden of graph recommendation.</li>
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Model:</strong> PULSE, combining community-aware embedding generation (CEG), socially-connected item-aware embedding generation (SIEG), adaptive gated fusion, and a LightGCN backbone trained with BPR and self-supervised objectives.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> compared against 13 graph collaborative filtering and social-recommendation baselines on Douban-Book, Yelp, and Epinions using Recall@K and NDCG@K, with additional evaluations under sparse-interaction, cold-start, and noisy-social-network settings; also measured parameter size and computational efficiency.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> evaluated PULSE against 13 GCF and SocialRec baselines across three interaction-social graphs containing 13K-20K users, 22K-47K items, 338K-598K interactions, and 169K-727K social links, using Recall@K and NDCG@K.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Robustness and generalization:</strong> designed additional evaluations for 500 held-out cold-start users and adversarially corrupted social networks to test generalization under sparse and noisy graph conditions.</li>
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Improvement and impact:</strong> reduced parameters by up to 50% compared with LightGCN and improved NDCG@20 by 9.0%, 8.1%, and 8.5% over the best competitors across the three datasets.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> contributed as a co-author spanning model development, experiments, and paper preparation; accepted as an Oral paper at WWW 2026.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> contributed to the CEG module by investigating scalable overlapping community-detection strategies and conducting component ablation studies across three recommendation datasets; collaborated with co-authors on experiment analysis and paper preparation.</li>
           </ul>
         </li>
         <li>
@@ -156,7 +148,7 @@
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Model:</strong> PNE-GAD, a two-stage self-explainable graph-level anomaly-detection framework that uses a GIN-based Normality Explanation Detector (NED) with an MLP projection head, explanation prototypes, and a WL-kernel-based normality evidence signature for anomaly decisions.</li>
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Experiment and evaluation:</strong> evaluated PNE-GAD against 15 baselines across nine bioinformatics, molecular, and social-network datasets using AUROC, with two normal/anomalous class configurations, additional ablation, contamination-robustness, and explanation-quality studies.</li>
             <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Improvement and impact:</strong> achieved the best anomaly-detection performance on 7 of 9 datasets and the best average rank across all datasets, while grounding each decision in interpretable normality evidence rather than an opaque anomaly score alone.</li>
-            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> contributed to the model experiments and analysis; especially interpretability and explainability.</li>
+            <li style="padding: 0; border: none; background: transparent; display: list-item;"><strong>Role and collaboration:</strong> evaluated PNE-GAD's interpretability on MUTAG through edge-level comparison with ground-truth substructures and qualitative visualization; the method achieved 99% AUROC.</li>
           </ul>
         </li>
       </ul>
